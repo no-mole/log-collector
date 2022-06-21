@@ -1,5 +1,5 @@
-name: logger_center
-namespace: biomind
+name: logger_collector
+namespace: neptune
 version: v1
 httpPort: 0
 grpcPort: 0
