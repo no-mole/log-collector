@@ -3,3 +3,4 @@ vendor
 .git
 .env
 config/dev
+Dockerfile
