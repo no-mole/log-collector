@@ -1,0 +1,5 @@
+name: logger_center
+namespace: biomind
+version: v1
+httpPort: 0
+grpcPort: 0

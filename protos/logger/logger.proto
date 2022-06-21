@@ -1,0 +1,16 @@
+syntax = "proto3";  //语法声明
+
+package logger; //包
+
+option go_package = "github.com/no-mole/log-collector/protos/logger";
+
+import "google/protobuf/empty.proto";
+
+service LoggerService {
+    rpc Write(stream WriteRequest)returns(google.protobuf.Empty){}
+}
+
+message WriteRequest{
+    string tag =1;
+    bytes entry = 2;
+}

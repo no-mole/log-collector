@@ -1,0 +1,73 @@
+outputs:
+#  - type: elasticsearch
+#    tags:
+#      - app
+#      - tracing
+#      - gin
+#    fields:
+#      queueSize: 1024
+#      flushFrequency: 5
+  - type: file
+    tags:
+      - app
+    fields:
+      queueSize: 1024
+      filename: app.log
+      maxSize: 2048
+      maxBackups: 10
+      maxAge: 15
+  - type: file
+    tags:
+      - gin
+    fields:
+      queueSize: 1024
+      filename: gin.log
+      maxSize: 2048
+      maxBackups: 10
+      maxAge: 15
+  - type: file
+    tags:
+      - tracing
+    fields:
+      queueSize: 1024
+      filename: tracing.log
+      maxSize: 2048
+      maxBackups: 10
+      maxAge: 15
+  - type: file
+    tags:
+      - trap
+    fields:
+      queueSize: 1024
+      filename: trap.log
+      maxSize: 2048
+      maxBackups: 10
+      maxAge: 15
+  - type: udp
+    tags:
+      - gin
+    fields:
+      queueSize: 1024
+      ip: "127.0.0.1"
+      port: 6311
+  - type: udp
+    tags:
+      - tracing
+    fields:
+      queueSize: 1024
+      ip: "127.0.0.1"
+      port: 6312
+  - type: udp
+    tags:
+      - app
+    fields:
+      queueSize: 1024
+      ip: "127.0.0.1"
+      port: 6313
+  - type: udp
+    tags:
+      - trap
+    fields:
+      queueSize: 1024
+      ip: "127.0.0.1"
+      port: 6314

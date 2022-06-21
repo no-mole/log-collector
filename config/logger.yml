@@ -1,0 +1,6 @@
+level: info
+queueLength: 1024
+dispatchers:
+  - type: stdout
+    formatter: json
+    tags: [ "*" ]
